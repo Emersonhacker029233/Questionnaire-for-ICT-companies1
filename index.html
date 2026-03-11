@@ -36,10 +36,6 @@ border-bottom:1px solid #ddd;
 padding-bottom:5px;
 }
 
-p{
-line-height:1.6;
-}
-
 .question{
 margin-top:20px;
 }
@@ -51,8 +47,8 @@ margin-top:5px;
 
 input[type=text],
 input[type=email],
-input[type=tel],
 input[type=number],
+input[type=tel],
 textarea{
 width:100%;
 padding:8px;
@@ -85,13 +81,18 @@ background:#001f40;
 font-style:italic;
 }
 
-</style>
+.thankyou{
+display:none;
+text-align:center;
+padding:60px;
+}
 
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="container" id="form-section">
 
 <h1>
 Capacity Mapping Survey: Performance and Preparedness of 100% Tanzanian-Owned Suppliers and Service Providers in Reserved Mining Categories under Regulation 13A of the Mining (Local Content) Regulations, 2018 (as amended)
@@ -99,27 +100,36 @@ Capacity Mapping Survey: Performance and Preparedness of 100% Tanzanian-Owned Su
 
 <p><b>Purpose Statement:</b> This survey, conducted by the Mines Suppliers and Services Providers Association of Tanzania (MSSPAT), assesses the performance and preparedness of 100% Tanzanian-owned suppliers and service providers in the mining sector.</p>
 
-<p><b>Confidentiality & Consent:</b> Responses are anonymous/confidential and will be used only for research/advocacy purposes.</p>
+<p><b>Confidentiality & Consent:</b> Responses are confidential and will be used only for research and advocacy purposes.</p>
 
-<p><b>Estimated Time & Contact:</b> Takes about 15–20 minutes. For questions contact MSSPAT.</p>
+<p><b>Estimated Time:</b> 15–20 minutes</p>
 
-
-<form action="https://formsubmit.co/info@ictcs.co.tz,secretary@msspat.co.tz" method="POST">
+<form id="surveyForm"
+action="https://formsubmit.co/info@ictcs.co.tz"
+method="POST">
 
 <input type="hidden" name="_captcha" value="false">
 
-<!-- RESPONDENT INFORMATION -->
+<input type="hidden" name="_cc" value="secretary@msspat.co.tz,emersonpkiondo79@gmail.com">
+
+<input type="hidden" name="_subject" value="New Mining ICT Capacity Survey Response">
+
+<input type="hidden" name="_template" value="table">
+
+<input type="hidden" name="_next" value="#">
+
+<!-- CONTACT INFORMATION -->
 
 <h2>Respondent Information</h2>
 
 <div class="question">
 Full Name
-<input type="text" name="full_name" required>
+<input type="text" name="name" required>
 </div>
 
 <div class="question">
 Company Name
-<input type="text" name="company_name" required>
+<input type="text" name="company" required>
 </div>
 
 <div class="question">
@@ -132,75 +142,67 @@ Phone Number
 <input type="tel" name="phone" required>
 </div>
 
-
 <!-- SECTION A -->
 
 <h2>Section A: Company Background and Ownership</h2>
 
 <div class="question">
-1. Is your ICT Company 100% owned by Tanzanian citizens?
+Is your ICT Company 100% owned by Tanzanian citizens?
+
 <div class="options">
 <label><input type="radio" name="ownership" value="Yes"> Yes</label><br>
-<label><input type="radio" name="ownership" value="No"> No (If No skip/disqualify)</label>
+<label><input type="radio" name="ownership" value="No"> No</label>
 </div>
+
 </div>
 
 <div class="question">
-2. When was your company established?
+Year Established
 <input type="number" name="year_established">
 </div>
 
 <div class="question">
-3. Total number of employees
+Total Employees
 <input type="number" name="employees">
 </div>
 
 <div class="question">
-4. Staff breakdown (%)
-
-Technical/Engineering
-<input type="number" name="technical_percent">
-
-Managerial/Senior
-<input type="number" name="managerial_percent">
-
-Sales/Support
-<input type="number" name="sales_percent">
-</div>
-
-<div class="question">
-5. Does your company hold relevant registrations/licenses?
-<div class="options">
-<label><input type="radio" name="licenses" value="Yes"> Yes</label>
-<label><input type="radio" name="licenses" value="No"> No</label>
-</div>
-
-Specify types
-<input type="text" name="license_types">
+Licenses Held (TCRA, TIN etc)
+<input type="text" name="licenses">
 </div>
 
 <!-- SECTION B -->
 
-<h2>Section B: Awareness and Compliance</h2>
+<h2>Section B: Awareness of Mining Local Content Regulations</h2>
 
 <div class="question">
-Aware of Mining Local Content Regulations?
+
+Aware of Regulation 13A?
+
 <div class="options">
+
 <label><input type="radio" name="aware" value="Yes"> Yes</label>
+
 <label><input type="radio" name="aware" value="No"> No</label>
+
 <label><input type="radio" name="aware" value="Partially"> Partially</label>
+
 </div>
+
 </div>
 
 <div class="question">
-Extent Regulation 13A enhances opportunities
-<div class="rating">
-<label><input type="radio" name="enhancement" value="1">1</label>
-<label><input type="radio" name="enhancement" value="2">2</label>
-<label><input type="radio" name="enhancement" value="3">3</label>
-<label><input type="radio" name="enhancement" value="4">4</label>
-<label><input type="radio" name="enhancement" value="5">5</label>
+
+Provided ICT services to mining companies?
+
+<div class="options">
+
+<label><input type="radio" name="provided_services" value="Yes"> Yes</label>
+
+<label><input type="radio" name="provided_services" value="No"> No</label>
+
 </div>
+
 </div>
 
 <!-- SECTION C -->
@@ -208,63 +210,61 @@ Extent Regulation 13A enhances opportunities
 <h2>Section C: ICT Hardware Capacity</h2>
 
 <div class="question">
-Does your company supply mining ICT hardware?
+
+Supply mining-suitable ICT hardware?
+
 <div class="options">
+
 <label><input type="radio" name="hardware" value="Yes"> Yes</label>
+
 <label><input type="radio" name="hardware" value="No"> No</label>
+
 <label><input type="radio" name="hardware" value="Partially"> Partially</label>
+
 </div>
+
 </div>
 
 <div class="question">
-Rate capacity
 
-Rugged hardware
-<div class="rating">
-<label><input type="radio" name="rugged" value="1">1</label>
-<label><input type="radio" name="rugged" value="2">2</label>
-<label><input type="radio" name="rugged" value="3">3</label>
-<label><input type="radio" name="rugged" value="4">4</label>
-<label><input type="radio" name="rugged" value="5">5</label>
-</div>
+Capacity rating (1=Low, 5=High)
 
-Networking equipment
+<br><br>Networking Equipment
+
 <div class="rating">
+
 <label><input type="radio" name="networking" value="1">1</label>
+
 <label><input type="radio" name="networking" value="2">2</label>
+
 <label><input type="radio" name="networking" value="3">3</label>
+
 <label><input type="radio" name="networking" value="4">4</label>
+
 <label><input type="radio" name="networking" value="5">5</label>
+
 </div>
+
 </div>
 
+<!-- CHALLENGES -->
 
-<!-- SECTION I -->
-
-<h2>Section I: Challenges and Recommendations</h2>
+<h2>Challenges and Recommendations</h2>
 
 <div class="question">
-Main challenges in delivering ICT to mining
+
+Main Challenges
+
 <textarea name="challenges"></textarea>
+
 </div>
 
 <div class="question">
-Regulation 13A impact
-<div class="options">
-<label><input type="radio" name="impact" value="Positive"> Positive</label>
-<label><input type="radio" name="impact" value="Neutral"> Neutral</label>
-<label><input type="radio" name="impact" value="Negative"> Negative</label>
-</div>
-</div>
 
-<div class="question">
-Government support suggestions
+Government Support Suggestions
+
 <textarea name="government_support"></textarea>
-</div>
 
-<div class="question">
-Additional comments
-<textarea name="comments"></textarea>
 </div>
 
 <button type="submit">Submit Questionnaire</button>
@@ -272,6 +272,44 @@ Additional comments
 </form>
 
 </div>
+
+<!-- THANK YOU MESSAGE -->
+
+<div class="container thankyou" id="thankyou">
+
+<h1>THANK YOU</h1>
+
+<p>
+Your response has been successfully submitted.
+</p>
+
+<p>
+We appreciate your participation in the Capacity Mapping Survey.
+</p>
+
+<p>
+Your feedback will contribute to strengthening local ICT capacity in Tanzania’s mining sector.
+</p>
+
+</div>
+
+<script>
+
+const form = document.getElementById('surveyForm');
+
+form.addEventListener('submit', function(){
+
+setTimeout(function(){
+
+document.getElementById('form-section').style.display="none";
+
+document.getElementById('thankyou').style.display="block";
+
+},500);
+
+});
+
+</script>
 
 </body>
 </html>
