@@ -38,10 +38,6 @@ border-bottom:2px solid #eee;
 padding-bottom:6px;
 }
 
-p{
-line-height:1.6;
-}
-
 .question{
 margin-top:20px;
 }
@@ -98,20 +94,8 @@ padding:60px;
 <div class="container" id="form-section">
 
 <h1>
-Capacity Mapping Survey: Performance and Preparedness of 100% Tanzanian-Owned Suppliers and Service Providers in Reserved Mining Categories under Regulation 13A of the Mining (Local Content) Regulations, 2018 (as amended)
+Capacity Mapping Survey: Performance and Preparedness of 100% Tanzanian-Owned Suppliers and Service Providers in Reserved Mining Categories under Regulation 13A
 </h1>
-
-<p>
-<strong>Purpose Statement:</strong> This survey, conducted by the Mines Suppliers and Services Providers Association of Tanzania (MSSPAT), assesses the performance and preparedness of 100% Tanzanian-owned suppliers and service providers in the mining sector.
-</p>
-
-<p>
-<strong>Confidentiality & Consent:</strong> Responses are confidential and will only be used for research and advocacy purposes.
-</p>
-
-<p>
-<strong>Estimated Time:</strong> 15–20 minutes.
-</p>
 
 <form id="surveyForm" action="https://formsubmit.co/emersonpkiondo@gmail.com" method="POST">
 
@@ -143,10 +127,11 @@ Phone Number
 <input type="tel" name="Phone Number" required>
 </div>
 
-<h2>Section A: Company Background</h2>
+
+<h2>Section A: Company Background and Ownership</h2>
 
 <div class="question">
-Is your ICT company 100% owned by Tanzanian citizens?
+1. Is your ICT Company 100% owned by Tanzanian citizens?
 <div class="options">
 <label><input type="radio" name="Ownership" value="Yes"> Yes</label><br>
 <label><input type="radio" name="Ownership" value="No"> No</label>
@@ -154,24 +139,42 @@ Is your ICT company 100% owned by Tanzanian citizens?
 </div>
 
 <div class="question">
-Year Established
+2. When was your company established/incorporated?
 <input type="number" name="Year Established">
 </div>
 
 <div class="question">
-Total Number of Employees
+3. Total number of employees
 <input type="number" name="Total Employees">
 </div>
 
 <div class="question">
-Licenses Held (TCRA, BRELA, TIN etc.)
-<input type="text" name="Licenses">
+4. Staff breakdown (% – add to 100%)
+Technical/Engineering (Tanzanian citizens)
+<input type="number" name="Technical Staff %">
+
+Managerial/Senior
+<input type="number" name="Managerial Staff %">
+
+Sales/Support
+<input type="number" name="Sales Staff %">
 </div>
 
-<h2>Section B: Awareness of Mining Local Content Regulations</h2>
+<div class="question">
+5. Does your company hold relevant registrations/licenses?
+<div class="options">
+<label><input type="radio" name="Licenses Held" value="Yes"> Yes</label><br>
+<label><input type="radio" name="Licenses Held" value="No"> No</label>
+</div>
+Specify Types
+<input type="text" name="License Types">
+</div>
+
+
+<h2>Section B: Awareness and Compliance with Mining Local Content Regulations</h2>
 
 <div class="question">
-Are you aware of Regulation 13A?
+1. Aware of Mining Local Content Regulations and Regulation 13A?
 <div class="options">
 <label><input type="radio" name="Regulation Awareness" value="Yes"> Yes</label><br>
 <label><input type="radio" name="Regulation Awareness" value="No"> No</label><br>
@@ -180,48 +183,154 @@ Are you aware of Regulation 13A?
 </div>
 
 <div class="question">
-Have you provided ICT services to mining companies before?
+2. Has your company checked Mining Commission publications for Regulation 13A reserved lists?
+<div class="options">
+<label><input type="radio" name="Checked Reserved List" value="Yes"> Yes</label><br>
+<label><input type="radio" name="Checked Reserved List" value="No"> No</label>
+</div>
+Specify categories
+<input type="text" name="Reserved Categories">
+</div>
+
+<div class="question">
+3. To what extent does Regulation 13A enhance opportunities for local ICT firms?
+<br>
+<label><input type="radio" name="Enhancement Rating" value="1">1</label>
+<label><input type="radio" name="Enhancement Rating" value="2">2</label>
+<label><input type="radio" name="Enhancement Rating" value="3">3</label>
+<label><input type="radio" name="Enhancement Rating" value="4">4</label>
+<label><input type="radio" name="Enhancement Rating" value="5">5</label>
+</div>
+
+<div class="question">
+4. Has your company provided ICT accessories/services to mining?
 <div class="options">
 <label><input type="radio" name="Mining Services" value="Yes"> Yes</label><br>
 <label><input type="radio" name="Mining Services" value="No"> No</label>
 </div>
+
+Number of mining clients/projects last 5 years
+<input type="number" name="Mining Projects">
 </div>
 
-<h2>Section C: ICT Hardware Capacity</h2>
+
+<h2>Section C: Capacity – ICT Accessories (Hardware)</h2>
 
 <div class="question">
-Can your company supply mining-grade ICT hardware?
+1. Does your company supply mining-suitable ICT hardware?
 <div class="options">
-<label><input type="radio" name="ICT Hardware Capacity" value="Yes"> Yes</label><br>
-<label><input type="radio" name="ICT Hardware Capacity" value="No"> No</label><br>
-<label><input type="radio" name="ICT Hardware Capacity" value="Partially"> Partially</label>
+<label><input type="radio" name="ICT Hardware" value="Yes"> Yes</label><br>
+<label><input type="radio" name="ICT Hardware" value="No"> No</label><br>
+<label><input type="radio" name="ICT Hardware" value="Partially"> Partially</label>
 </div>
 </div>
 
 <div class="question">
-Capacity Rating (1 = Low, 5 = High)
+2. Rate capacity to supply accessories (1 Low – 5 High)
 <br><br>
 
-Networking Equipment
-<br>
-<label><input type="radio" name="Networking Rating" value="1">1</label>
-<label><input type="radio" name="Networking Rating" value="2">2</label>
-<label><input type="radio" name="Networking Rating" value="3">3</label>
-<label><input type="radio" name="Networking Rating" value="4">4</label>
-<label><input type="radio" name="Networking Rating" value="5">5</label>
+Rugged/dust-proof hardware
+<label><input type="radio" name="Rugged Hardware" value="1">1</label>
+<label><input type="radio" name="Rugged Hardware" value="2">2</label>
+<label><input type="radio" name="Rugged Hardware" value="3">3</label>
+<label><input type="radio" name="Rugged Hardware" value="4">4</label>
+<label><input type="radio" name="Rugged Hardware" value="5">5</label>
+
+<br><br>
+
+Networking/connectivity equipment
+<label><input type="radio" name="Networking Equipment" value="1">1</label>
+<label><input type="radio" name="Networking Equipment" value="2">2</label>
+<label><input type="radio" name="Networking Equipment" value="3">3</label>
+<label><input type="radio" name="Networking Equipment" value="4">4</label>
+<label><input type="radio" name="Networking Equipment" value="5">5</label>
 
 </div>
 
-<h2>Challenges and Recommendations</h2>
+
+<h2>Section D: Capacity – ICT Services</h2>
 
 <div class="question">
-Main challenges your company faces in supplying the mining sector
+1. Does your company offer specialized mining ICT services?
+<div class="options">
+<label><input type="radio" name="ICT Services" value="Yes"> Yes</label><br>
+<label><input type="radio" name="ICT Services" value="No"> No</label><br>
+<label><input type="radio" name="ICT Services" value="Partially"> Partially</label>
+</div>
+</div>
+
+
+<h2>Section E: Operational and Technical Capabilities</h2>
+
+<div class="question">
+Average annual revenue/turnover last 3 years
+<div class="options">
+<label><input type="radio" name="Revenue" value="<500M"> Less than 500M TZS</label><br>
+<label><input type="radio" name="Revenue" value="500M-2B"> 500M–2B</label><br>
+<label><input type="radio" name="Revenue" value="2B-5B"> 2B–5B</label><br>
+<label><input type="radio" name="Revenue" value=">5B"> More than 5B</label>
+</div>
+</div>
+
+
+<h2>Section F: Human Resources and Expertise</h2>
+
+<div class="question">
+Staff with mining-related ICT experience
+<input type="number" name="Mining ICT Staff">
+</div>
+
+<div class="question">
+Provide training on mining ICT?
+<div class="options">
+<label><input type="radio" name="Training Provided" value="Yes"> Yes</label><br>
+<label><input type="radio" name="Training Provided" value="No"> No</label>
+</div>
+Frequency
+<input type="text" name="Training Frequency">
+</div>
+
+
+<h2>Section G: Financial and Market Penetration</h2>
+
+<div class="question">
+Percentage of portfolio from mining sector
+<div class="options">
+<label><input type="radio" name="Mining Portfolio" value="0%">0%</label><br>
+<label><input type="radio" name="Mining Portfolio" value="1-10%">1–10%</label><br>
+<label><input type="radio" name="Mining Portfolio" value="11-30%">11–30%</label><br>
+<label><input type="radio" name="Mining Portfolio" value=">30%">More than 30%</label>
+</div>
+</div>
+
+
+<h2>Section I: Challenges and Recommendations</h2>
+
+<div class="question">
+Main challenges in delivering ICT to mining sector
 <textarea name="Challenges"></textarea>
 </div>
 
 <div class="question">
-What support from government or stakeholders would help improve your capacity?
+Impact of Regulation 13A on your company
+<div class="options">
+<label><input type="radio" name="Regulation Impact" value="Positive"> Positive</label><br>
+<label><input type="radio" name="Regulation Impact" value="Neutral"> Neutral</label><br>
+<label><input type="radio" name="Regulation Impact" value="Negative"> Negative</label>
+</div>
+
+Explanation
+<textarea name="Impact Explanation"></textarea>
+</div>
+
+<div class="question">
+Government support suggestions
 <textarea name="Government Support"></textarea>
+</div>
+
+<div class="question">
+Additional comments
+<textarea name="Additional Comments"></textarea>
 </div>
 
 <button type="submit">Submit Survey</button>
@@ -230,15 +339,12 @@ What support from government or stakeholders would help improve your capacity?
 
 </div>
 
+
 <div class="container thankyou" id="thankyou">
 
 <h1>THANK YOU</h1>
 
 <p>Your response has been successfully submitted.</p>
-
-<p>We appreciate your participation in the MSSPAT Capacity Mapping Survey.</p>
-
-<p>Your input will help strengthen Tanzanian suppliers in the mining sector.</p>
 
 </div>
 
